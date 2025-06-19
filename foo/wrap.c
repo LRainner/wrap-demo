@@ -3,7 +3,7 @@
 int __real_foo(int x);  // forward declaration
 
 int __wrap_foo(int x) {
-    printf("[WRAP] foo called with %d\n", x);
+    fprintf(stdout, "[WRAP foo] foo called with %d\n", x);
     return __real_foo(x);
 }
 
